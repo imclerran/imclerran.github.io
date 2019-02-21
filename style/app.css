@@ -1,0 +1,13 @@
+.navbar {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    display: block;
+    background-color: rgb(37, 37, 37);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    align-content: center;
+    border-radius: 0px;
+    z-index: 100;
+}
