@@ -1,13 +1,28 @@
-.navbar {
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden;
-    display: block;
-    background-color: rgb(37, 37, 37);
-    position: fixed;
+.bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("../assets/cover-2048.jpg");
+    min-height: 100%;
+}
+
+.center-div {
+    position: absolute;
+    margin: auto;
     top: 0;
-    width: 100%;
-    align-content: center;
-    border-radius: 0px;
-    z-index: 100;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: fit-content;
+}
+
+.content-body {
+    background-color:rgba(0,0,0,0.75);
+    color: white;
+    margin-left:auto;
+    margin-right:auto;
+    margin:auto;
+}
+
+.navbar-offset {
+    margin-top:52px;
 }

@@ -2,62 +2,60 @@
 <html style="height:100%" lang="en">
 <title>IFMDev :: Ian McLerran</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style/app.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
-<style>
-    .bgimg-1 {
-        background-position: center;
-        background-attachment: fixed;
-        background-size: cover;
-        background-image: url("assets/cover.jpg");
-        min-height: 100%;
-    }
-</style>
-
 <body style="height:100%">
 
-    <div class="w3-top w3-container w3-black w3-card-4 w3-xlarge">
+    <div id="navbar" class="w3-top w3-container w3-white w3-card-4 w3-xlarge">
         <div class="w3-bar w3-center">
-            <a href="index.html" class="w3-bar-item w3-button w3-hover-white">
+            <a href="index.html" class="w3-bar-item w3-button w3-hover-teal">
                 <i class="fas fa-home"></i>
             </a>
-            <a href="projects.html" class="w3-bar-item w3-button w3-hover-white">Projects</a>
-            <a href="under-construction.html" class="w3-bar-item w3-button w3-hover-white">About Me</a>
-            <a href="under-construction.html" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+            <a href="projects.html" class="w3-bar-item w3-button w3-hover-teal">Projects</a>
+            <a href="under-construction.html" class="w3-bar-item w3-button w3-hover-teal">About Me</a>
+            <a href="contact.html" class="w3-bar-item w3-button w3-hover-teal">Contact</a>
         </div>
     </div>
 
-    <div class="w3-display-container bgimg-1 w3-padding-64" style="margin-top:52px">
+    <div class="w3-display-container bgimg-1 w3-padding-64 navbar-offset">
 
-        <div class="w3-container w3-pannel w3-card-4" style="width:90%; background-color:rgba(0,0,0,0.75); color:rgba(255,255,255,0.75); padding-bottom:16px;
-            margin-left:auto; margin-right:auto">
+        <div class="w3-container w3-pannel w3-card-4 w3-round content-body" style="width:90%;">
             <header class="">
-                <h2>Projects</h2>
+                <h2 style="padding-left:16px; padding-top:16px">Projects</h2>
             </header>
 
             <div class="w3-cell-row">
                 <div class="w3-cell w3-mobile" style="width:33%">
-                    <div class="w3-card-4 w3-white" style="margin:16px">
-                        <header class="w3-container w3-teal">
-                            <h3>LibECS</h3>
+                    <div class="w3-card-4 w3-white w3-round" style="margin:16px">
+                        <header class="w3-container w3-light-grey">
+                            <h3 style="font-weight: bold">LibECS</h3>
                             <h6>(Jan. 2019 - Present)</h6>
                         </header>
                         <div class="w3-container">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p>LibECS is an implementation of the Entity-Component-System architectural pattern,
+                                used to manage game objects and their properties and behaviors. The ECS pattern
+                                prevents inflexible and complex inheritance heirachies, which can sometimes lead
+                                to liskov substitution violations, where subclasses do not implement all of their
+                                parent classes behavior.
+                            </p>
+                            <p>
+                                This project was born out of a need for a better way to structure game code,
+                                when writing a LibGDX bullet-hell game for the second time, in an attempt to
+                                learn from mistakes of the past.
+                            </p>
                         </div>
-                        <footer class="w3-container w3-teal">
+                        <footer class="w3-container w3-light-grey w3-large w3-right-align">
                             <a href="https://github.com/imclerran/LibECS" target="_blank">Github</a>
                         </footer>
                     </div>
                 </div>
-                <div class="w3-cell w3-mobile" style="width:33%">
-                    <div class="w3-card-4 w3-white" style="margin:16px">
-                        <header class="w3-container w3-teal">
-                            <h3>Achiever</h3>
+                <div class="w3-cell w3-mobile" style="width:33%;">
+                    <div class="w3-card-4 w3-white w3-round" style="margin:16px;">
+                        <header class="w3-container w3-light-grey">
+                            <h3 style="font-weight: bold">Achiever</h3>
                             <h6>(Nov. 2018 - Present)</h6>
                         </header>
                         <div class="w3-container">
@@ -65,15 +63,15 @@
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                                 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>
-                        <footer class="w3-container w3-teal">
+                        <footer class="w3-container w3-light-grey w3-large w3-right-align">
                             <a href="https://github.com/imclerran/Achiever" target="_blank">Github</a>
                         </footer>
                     </div>
                 </div>
                 <div class="w3-cell w3-mobile" style="width:33%">
-                    <div class="w3-card-4 w3-white" style="margin:16px">
-                        <header class="w3-container w3-teal">
-                            <h3>IFMXSheets</h3>
+                    <div class="w3-card-4 w3-white w3-round" style="margin:16px">
+                        <header class="w3-container w3-light-grey">
+                            <h3 style="font-weight: bold">IFMXSheets</h3>
                             <h6>(Sep. 2018 - Dec. 2018)</h6>
                         </header>
                         <div class="w3-container">
@@ -81,7 +79,7 @@
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                                 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>
-                        <footer class="w3-container w3-teal">
+                        <footer class="w3-container w3-light-grey w3-large w3-right-align">
                             <a href="https://github.com/imclerran/IFMXSheets" target="_blank">Github</a>
                         </footer>
                     </div>
@@ -90,9 +88,9 @@
 
             <div class="w3-cell-row">
                 <div class="w3-cell w3-mobile" style="width:33%">
-                    <div class="w3-card-4 w3-white" style="margin:16px">
-                        <header class="w3-container w3-teal">
-                            <h3>iKaizen</h3>
+                    <div class="w3-card-4 w3-white w3-round" style="margin:16px">
+                        <header class="w3-container w3-light-grey">
+                            <h3 style="font-weight: bold">iKaizen</h3>
                             <h6>(2016)</h6>
                         </header>
                         <div class="w3-container">
@@ -100,15 +98,15 @@
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                                 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>
-                        <footer class="w3-container w3-teal">
+                        <footer class="w3-container w3-light-grey w3-large w3-right-align">
                             <a href="https://github.com/imclerran/iKaizen" target="_blank">Github</a>
                         </footer>
                     </div>
                 </div>
                 <div class="w3-cell w3-mobile" style="width:33%">
-                    <div class="w3-card-4 w3-white" style="margin:16px">
-                        <header class="w3-container w3-teal">
-                            <h3>MTX-OS</h3>
+                    <div class="w3-card-4 w3-white w3-round" style="margin:16px">
+                        <header class="w3-container w3-light-grey">
+                            <h3 style="font-weight: bold">MTX-OS</h3>
                             <h6>(2014)</h6>
                         </header>
                         <div class="w3-container">
@@ -116,7 +114,7 @@
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                                 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>
-                        <footer class="w3-container w3-teal">
+                        <footer class="w3-container w3-light-grey w3-large w3-right-align">
                             <a href="https://github.com/imclerran/MTX-OS" target="_blank">Github</a>
                         </footer>
                     </div>
@@ -128,8 +126,8 @@
         </div>
     </div>
 
-    <footer class="w3-container w3-black w3-large w3-bottom w3-center w3-card-4">
-        <div class="w3-bar">
+    <footer class="w3-container  w3-bottom w3-center">
+        <div class="w3-bar w3-white w3-card-4">
             <a href="https://github.com/imclerran" target="_blank" class="w3-button w3-hover-teal"
                 style="text-decoration:none">
                 <i class="fab fa-github w3-xlarge"></i>
