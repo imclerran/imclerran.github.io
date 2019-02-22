@@ -51,3 +51,15 @@
 .accent-color-foreground {
     color: #ffcc66;
 }
+
+.pill-left-end {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    /* border-radius: 16px 0px 0px 16px; */
+}
+
+.pill-right-end {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    /* border-radius: 0px 16px 16px 0px; */
+}
