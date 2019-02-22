@@ -1,5 +1,6 @@
 .bgimg-1 {
-    background-position: center;
+    background-position: left center;
+    background-attachment: fixed;
     background-size: cover;
     background-image: url("../assets/cover-2048.jpg");
     min-height: 100%;
@@ -25,4 +26,8 @@
 
 .navbar-offset {
     margin-top:52px;
+}
+
+.fixed-div {
+    position: fixed;
 }
