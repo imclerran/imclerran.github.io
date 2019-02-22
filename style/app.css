@@ -14,10 +14,12 @@
     bottom: 0;
     left: 0;
     height: fit-content;
+    height: -moz-fit-content;
 }
 
 .content-body {
     background-color:rgba(0,0,0,0.75);
+    /* text-shadow: 1px 1px #000000; */
     color: white;
     margin-left:auto;
     margin-right:auto;
@@ -30,4 +32,22 @@
 
 .fixed-div {
     position: fixed;
+}
+
+.card-header {
+    border-radius: 4px 4px 0px 0px;
+    background-color: #f1f1f1!important;
+}
+
+.card-footer {
+    border-radius: 0px 0px 4px 4px;
+    background-color: #f1f1f1!important;
+}
+
+.accent-color-background {
+    background-color: #ffcc66;
+}
+
+.accent-color-foreground {
+    color: #ffcc66;
 }
