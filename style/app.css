@@ -55,11 +55,19 @@
 .pill-left-end {
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
-    /* border-radius: 16px 0px 0px 16px; */
 }
 
 .pill-right-end {
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
-    /* border-radius: 0px 16px 16px 0px; */
+}
+
+.text-shadow {
+    text-shadow: 1px 1px black;
+}
+
+.chip {
+    display: inline-block;
+    margin-right: 4px;
+    margin-bottom: 4px;
 }
