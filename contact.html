@@ -28,6 +28,17 @@
             </header>
             <div class="w3-center">
                 <ul class="w3-ul">
+                    <script type="text/javascript">
+                        user = "imclerran";
+                        domain = "gmail.com";
+                        document.write(
+                            '<a href=\"mailto:' + user + '@' + domain
+                            + '\" style=\"text-decoration:none\" id=\"mail-link\"></a>');
+                        document.getElementById("mail-link").innerHTML =
+                            '<li class=\"w3-xlarge w3-hoverable w3-hover-white w3-round\" id=\"mail-li\">'
+                        document.getElementById("mail-li").innerHTML =
+                            '<i class=\"fa fa-envelope fa-fw\" id=\"mail-icon\"></i>&nbsp;Email';
+                    </script>
                     <a href="https://github.com/imclerran" target="_blank" style="text-decoration:none">
                         <li class="w3-xlarge w3-hoverable w3-hover-white w3-round">
                             <i class="fab fa-github"></i>&nbsp;Github
