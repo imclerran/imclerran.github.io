@@ -73,3 +73,8 @@
     margin-right: 4px;
     margin-bottom: 4px;
 }
+
+.card {
+    margin-bottom:16px;
+    border-radius:4px;
+}
