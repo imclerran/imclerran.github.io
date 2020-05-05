@@ -1,4 +1,3 @@
-
 [
     {
         "title": "Projectile Inferno",
@@ -6,7 +5,8 @@
         "languages": ["Java", "LibGDX"],
         "highlights": ["Entity-Component-System architecture"],
         "challenges": ["Refactoring core game engine to optimize memory usage"],
-        "sourceUrl": "https://gitlab.eecs.wsu.edu/cs-487/487sp19_projectile-inferno"
+        "sourceUrl": "https://gitlab.eecs.wsu.edu/cs-487/487sp19_projectile-inferno",
+        "favorite": true
     },
     {
         "title": "Achiever",
@@ -14,7 +14,8 @@
         "languages": ["Javascript", "NodeJS", "jQuery", "MongoDB", "OAuth"],
         "highlights": ["Planned and executed 4 1-week Agile style sprints"],
         "challenges": ["schedule page"],
-        "sourceUrl": "#"
+        "sourceUrl": "#",
+        "favorite": true
     },
     {
         "title": "OceanGate DAQ",
@@ -22,7 +23,8 @@
         "languages": ["C++", "Arduino"],
         "highlights": ["Stakeholder requirements"],
         "challenges": ["SD Storage compatibility"],
-        "sourceUrl": "https://gitlab.eecs.wsu.edu/imclerran/DAQ"
+        "sourceUrl": "https://gitlab.eecs.wsu.edu/imclerran/DAQ",
+        "favorite": false
     },
     {
         "title": "THEIA",
@@ -30,7 +32,8 @@
         "languages": ["Dart", "Flutter"],
         "highlights": ["WRS Document", "Project Management Plan"],
         "challenges": ["Pathfinding algorithm"],
-        "sourceUrl": "https://gitlab.eecs.wsu.edu/imclerran/theia"
+        "sourceUrl": "https://gitlab.eecs.wsu.edu/imclerran/theia",
+        "favorite": true
     },
     {
         "title": "Questie",
@@ -38,7 +41,8 @@
         "languages": ["Lua"],
         "highlights": ["Feature pull request accepted and merged"],
         "challenges": ["Comprehending the large codebase"],
-        "sourceUrl": "https://github.com/AeroScripts/QuestieDev/pull/1442"
+        "sourceUrl": "https://github.com/AeroScripts/QuestieDev/pull/1442",
+        "favorite": true
     },
     {
         "title": "Checkstyle Halstead Metrics",
@@ -46,7 +50,8 @@
         "languages": ["Java"],
         "highlights": ["Black and White box testing"],
         "challenges": ["Whitebox testing"],
-        "sourceUrl": "https://gitlab.eecs.wsu.edu/imclerran/cs422-project"
+        "sourceUrl": "https://gitlab.eecs.wsu.edu/imclerran/cs422-project",
+        "favorite": false
     },
     {
         "title": "IFMXSheets",
@@ -54,7 +59,8 @@
         "languages": ["C#"],
         "highlights": ["Strategy design pattern for handling tokens"],
         "challenges": ["Avoiding infinite circular propagation of cell change events"],
-        "sourceUrl": "https://github.com/imclerran/IFMXSheets"
+        "sourceUrl": "https://github.com/imclerran/IFMXSheets",
+        "favorite": false
     },
     {
         "title": "Yelp App",
@@ -62,7 +68,8 @@
         "languages": ["C#", "PostgreSQL"],
         "highlights": [],
         "challenges": [],
-        "sourceUrl": "#"
+        "sourceUrl": "#",
+        "favorite": false
     },
     {
         "title": "iKaizen",
@@ -70,7 +77,8 @@
         "languages": ["Java"],
         "highlights": [],
         "challenges": [],
-        "sourceUrl": "https://github.com/imclerran/iKaizen"
+        "sourceUrl": "https://github.com/imclerran/iKaizen",
+        "favorite": false
     },
     {
         "title": "MTX-OS",
@@ -78,6 +86,16 @@
         "languages": ["C", "MIPS"],
         "highlights": [],
         "challenges": [],
-        "sourceUrl": "https://github.com/imclerran/MTX-OS"
+        "sourceUrl": "https://github.com/imclerran/MTX-OS",
+        "favorite": false
+    },
+    {
+        "title": "DSCalc",
+        "description": ["A simple android application written to automate routine tasks while working in quality assurance at Icicle Seafoods. The app was written and compiled entiredly using an IDE which runs directly on an Android device (AIDE)."],
+        "languages": ["Java"],
+        "highlights": ["Designed to solve real-world work issues"],
+        "challenges": ["Written entirely without access to internet resources (due to rural work environment)"],
+        "sourceUrl": "#",
+        "favorite": false
     }
 ]
