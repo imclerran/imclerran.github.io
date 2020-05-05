@@ -6,8 +6,85 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
 <body style="height:100%">
+
+    <script type="text/javascript">
+        var projects = [];
+        var projectsHtml = [];
+
+        function fetchJSONFile(path, callback) {
+            var httpRequest = new XMLHttpRequest();
+            httpRequest.onreadystatechange = function () {
+                if (httpRequest.readyState === 4) {
+                    if (httpRequest.status === 200) {
+                        var data = JSON.parse(httpRequest.responseText);
+                        if (callback) callback(data);
+                    }
+                }
+            };
+            httpRequest.open('GET', path);
+            httpRequest.send();
+        }
+
+        // this requests the file and executes a callback with the parsed result once
+        //   it is available
+        fetchJSONFile('projects.json', function (data) {
+            projects = data;
+
+            var projectHtml = ""
+
+            projects.forEach(project => {
+
+                projectHtml += "<div class='w3-col m6 l4 grid-item'>"
+                projectHtml += "  <div class='w3-card-4 w3-white w3-round w3-text-grey card' style='min-height:100%'>";
+                projectHtml += "    <header class='w3-container'>"
+                projectHtml += "      <h4 style='font-weight:bold'>" + project.title + "</h4>";
+                projectHtml += "      <h6>"
+                projectHtml += "        <i class='fa fa-code fa-fw w3-margin-right w3-text-teal w3-left'"
+                projectHtml += "          style='display:inline-block!important; margin-top:4px'></i>"
+                project.languages.forEach(lang => {
+                    projectHtml += "<div class='w3-container w3-round-xlarge w3-center w3-teal chip w3-left'>" + lang + "</div>"
+                })
+                projectHtml += "      </h6>"
+                projectHtml += "    </header>"
+                projectHtml += "    <hr style='margin-bottom:0px; margin-top:8px'>"
+                projectHtml += "    <div class='w3-container'>"
+                project.description.forEach(paragraph => {
+                    projectHtml += "<p>" + paragraph + "</p>"
+                })
+                projectHtml += "      <h6><i class='fa fa-highlighter fa-fw w3-margin-right w3-text-teal'></i><span class='w3-text-teal'>Highlights:</span>&nbsp;"
+                project.highlights.forEach(function (highlight, index) {
+                    projectHtml += highlight
+                    if (index < project.highlights.length - 1) projectHtml += ",&nbsp;"
+                    else projectHtml += "&nbsp;"
+                })
+                projectHtml += "      <h6><i class='fa fa-asterisk fa-fw w3-margin-right w3-text-teal'></i><span class='w3-text-teal'>Challenges:</span>&nbsp;"
+                project.challenges.forEach(function (challenge, index) {
+                    projectHtml += challenge
+                    if (index < project.challenges.length - 1) projectHtml += ",&nbsp;"
+                    else projectHtml += "&nbsp;"
+                })
+                projectHtml += "    </div>"
+                projectHtml += "    <hr style='margin:0px'>"
+                projectHtml += "    <footer class='w3-container w3-large w3-center' style='margin-top:0px;'>"
+                projectHtml += "      <a href='" + project.sourceUrl + "' target='_blank'>Source Code</a>"
+                projectHtml += "    </footer>"
+                projectHtml += "  </div>"
+                projectHtml += "</div>"
+                //projectsHtml.push(projectHtml);
+            });
+            document.getElementById("projects-container").innerHTML = projectHtml;
+            var elem = document.querySelector('.grid');
+            var msnry = new Masonry(elem, {
+                // options
+                columnWidth: '.grid-item',
+                itemSelector: '.grid-item',
+                //gutter: 16,
+            });
+        });
+    </script>
 
     <div id="navbar" class="w3-top w3-container w3-white w3-card-4 w3-xlarge w3-text-dark-grey">
         <div class="w3-bar w3-center">
@@ -28,18 +105,24 @@
                 <h2>Projects</h2>
             </header>
 
-            <div class="w3-row-padding">
+            <div id='projects-container' class="w3-row-padding grid">
+
                 <div class="w3-col m6 l4">
                     <div class="w3-card-4 w3-white w3-round w3-text-grey card" style="min-height:100%">
                         <header class="w3-container">
                             <h4 style="font-weight: bold">LibECS</h4>
-                            <h6 class="w3-text-teal">
-                                <i class="fa fa-calendar-alt fa-fw"></i>&nbsp;
-                                Jan 2019 - Present</h6>
                             <h6>
+                                <i class="fa fa-code fa-fw w3-margin-right w3-text-teal w3-left"
+                                    style='display:inline-block!important;margin-top:4px'></i>
+                                <!-- <div> -->
+                                <div class="w3-container w3-round-xlarge w3-center w3-teal chip w3-left">Java</div>
+                                <div class="w3-container w3-round-xlarge w3-center w3-teal chip w3-left">LibGDX</div>
+                                <!-- </div> -->
+                            </h6>
                         </header>
-                        <hr style="margin:0px">
+                        <hr style="margin-bottom:0px; margin-top: 8px;">
                         <div class="w3-container">
+
                             <p>LibECS is an implementation of the Entity-Component-System architectural pattern,
                                 used to manage game objects and their properties and behaviors. The ECS pattern
                                 prevents inflexible and complex inheritance hierarchies, which can sometimes
@@ -51,6 +134,10 @@
                                 when writing a LibGDX bullet-hell game for the second time, in an attempt to
                                 learn from mistakes of the past.
                             </p>
+                            <h6><i class="fa fa-highlighter fa-fw w3-margin-right w3-text-teal"></i><span
+                                    class="w3-text-teal">Highlights:</span>&nbsp;blah blah</h6>
+
+                            <h6><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Challenges:</h6>
                         </div>
                         <hr style="margin:0px">
                         <footer class="w3-container w3-large w3-center" style="margin-top:0px;">
@@ -58,113 +145,7 @@
                         </footer>
                     </div>
                 </div>
-                <div class="w3-col m6 l4">
-                    <div class="w3-card-4 w3-white w3-round w3-text-grey card">
-                        <header class="w3-container">
-                            <h4 style="font-weight: bold">Achiever</h4>
-                            <h6 class="w3-text-teal">
-                                <i class="fa fa-calendar-alt fa-fw"></i>&nbsp;
-                                Nov 2018 - Present</h6>
-                            <h6>
-                        </header>
-                        <hr style="margin:0px">
-                        <div class="w3-container">
-                            <p>
-                                Achiever is a todo-list app which uses gamification to encourage user interaction, and
-                                reward regular, on-time completion of tasks. While Achiever is still in the early
-                                stages of development, the project is the fruition of a long search for the ideal
-                                organizational tool for tracking the tasks I need to accomplish.
-                            </p>
-                            <p>
-                                Achiever is written in Flutter and Dart, using Redux for state management. This
-                                is an opportunity to learn new languages and frameworks. Flutter especially looks
-                                like an exciting tool for cross platform development, and is also a great chance
-                                to explore declarative programming.
-                            </p>
-                        </div>
-                        <hr style="margin:0px">
-                        <footer class="w3-container w3-large w3-center">
-                            <a href="https://github.com/imclerran/Achiever" target="_blank">Github</a>
-                        </footer>
-                    </div>
-                </div>
-                <div class="w3-col m6 l4">
-                    <div class="w3-card-4 w3-white w3-round w3-text-grey card">
-                        <header class="w3-container">
-                            <h4 style="font-weight: bold">IFMXSheets</h4>
-                            <h6 class="w3-text-teal">
-                                <i class="fa fa-calendar-alt fa-fw"></i>&nbsp;
-                                Sep 2018 - Dec 2018</h6>
-                            <h6>
-                        </header>
-                        <hr style="margin:0px">
-                        <div class="w3-container">
-                            <p>
-                                IFMXSheets is a Spreadsheet application built for a course on software engineering
-                                principles, and designed with SOLID principles in mind. Presentation and logic are
-                                completely distinct, with logic being handled by a `SpreadsheetEngine` library.
-                                Event handlers passed from the spreadsheet to the engine, to allow the communication
-                                between view and logic, without any coupling from the SpreadsheetEngine to the view.
-                            </p>
-                            <p>
-                                Infix-to-postfix conversion, expression tree generation, and tree evaluation is
-                                handled by `ITokenHandlers` where the expression tree asks a list of token handlers
-                                if they can handle a given token. Since the list is ordered by order of operations,
-                                the first token handler which can handle the token does.
-                            </p>
-                        </div>
-                        <hr style="margin:0px">
-                        <footer class="w3-container w3-large w3-center">
-                            <a href="https://github.com/imclerran/IFMXSheets" target="_blank">Github</a>
-                        </footer>
-                    </div>
-                </div>
-                <div class="w3-col m6 l4">
-                    <div class="w3-card-4 w3-white w3-round w3-text-grey card">
-                        <header class="w3-container">
-                            <h4 style="font-weight: bold">iKaizen</h4>
-                            <h6 class="w3-text-teal">
-                                <i class="fa fa-calendar-alt fa-fw"></i>&nbsp;
-                                2016</h6>
-                            <h6>
-                        </header>
-                        <hr style="margin:0px">
-                        <div class="w3-container">
-                            <p>iKaizen is an Android application designed to facilitate LEAN production by making it easy
-                                to write kaizen. iKaizen is follows Google's material design guidelines, and
-                                although never published publicly, has had 106 unique user installs, and currently
-                                has 4 active installs.</p>
-                        </div>
-                        <hr style="margin:0px">
-                        <footer class="w3-container w3-large w3-center">
-                            <a href="https://github.com/imclerran/iKaizen" target="_blank">Github</a>
-                        </footer>
-                    </div>
-                </div>
-                <div class="w3-col m6 l4">
-                    <div class="w3-card-4 w3-white w3-round w3-text-grey card">
-                        <header class="w3-container">
-                            <h4 style="font-weight: bold">MTX-OS</h4>
-                            <h6 class="w3-text-teal">
-                                <i class="fa fa-calendar-alt fa-fw"></i>&nbsp;
-                                2014</h6>
-                            <h6>
-                        </header>
-                        <hr style="margin:0px">
-                        <div class="w3-container">
-                            <p>MTX-OS is a multi-user, multitasking UNIX-like operating system, based on
-                                K.C. Wang's MTX. MTX-OS has its own shell, supports multiple TTY logins,
-                                as well as many common BASH commands. MTX-OS processes can run in either
-                                kernel or usermode. MTX-OS is written in C and assembly, has it's own
-                                bootloader and display drivers, and runs in a QEMU virtual machine.
-                            </p>
-                        </div>
-                        <hr style="margin:0px">
-                        <footer class="w3-container w3-large w3-center">
-                            <a href="https://github.com/imclerran/MTX-OS" target="_blank">Github</a>
-                        </footer>
-                    </div>
-                </div>
+
             </div>
 
         </div>

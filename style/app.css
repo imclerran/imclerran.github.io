@@ -78,3 +78,16 @@
     margin-bottom:16px;
     border-radius:4px;
 }
+
+/* masonry: */
+
+ .w3-col .grid-item {
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+}
+
+.w3-row-padding {
+    padding:0px!important;
+    margin-right: 8px;
+    margin-left: 8px;
+}

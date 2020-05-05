@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html style="height:100%">
+<title>Ian McLerran</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style/app.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+<body style="height:100%">
+
+    <div id="navbar" class="w3-top w3-container w3-white w3-card-4 w3-xlarge w3-text-dark-grey">
+        <div class="w3-bar w3-center">
+            <a href="index.html" class="w3-bar-item w3-button w3-hover-teal">
+                <i class="fas fa-home"></i>
+            </a>
+            <a href="about.html" class="w3-bar-item w3-button w3-hover-teal">CV</a>
+            <a href="projects.html" class="w3-bar-item w3-button w3-hover-teal">Projects</a>
+            <a href="contact.html" class="w3-bar-item w3-button w3-hover-teal">Contact</a>
+        </div>
+    </div>
+
+    <div class="bgimg-1 w3-row">
+
+        <div class="w3-col s11 m8 l6 w3-container w3-pannel w3-round w3-card-4 content-body center-div fixed-div">
+            <header class="w3-center">
+                <h2>Hi there! My name is Ian McLerran.</h2>
+            </header>
+            <div class="w3-center">
+                Glad you're here! I am a software engineering student at Washington State University,
+                and this is my portfolio. I'll use this site to share about my past and ongoing projects.
+            </div>
+            <div class="w3-center w3-padding-16">
+                <a href="about.html" class="w3-button w3-round w3-border w3-hover-white w3-xlarge">
+                    Curriculum Vitae
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="w3-container  w3-bottom w3-center">
+        <div class="w3-bar w3-white w3-card-4 pill-left-end pill-right-end w3-text-dark-grey">
+            <a href="https://github.com/imclerran" target="_blank" class="w3-button w3-hover-teal pill-left-end"
+                style="text-decoration:none">
+                <i class="fab fa-github w3-xlarge"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/imclerran" target="_blank" class="w3-button w3-hover-teal"
+                style="text-decoration:none">
+                <i class="fab fa-linkedin w3-xlarge"></i>
+            </a>
+            <a href="https://twitter.com/imclerran" target="_blank" class="w3-button w3-hover-teal pill-right-end"
+                style="text-decoration:none">
+                <i class="fab fa-twitter w3-xlarge"></i>
+            </a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

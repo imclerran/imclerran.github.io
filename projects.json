@@ -1,0 +1,83 @@
+
+[
+    {
+        "title": "Projectile Inferno",
+        "description": ["Bullet hell game focused on design patterns, which used the Entity-Component-System architecture to satisfy SOLID, and promote code reuse."],
+        "languages": ["Java", "LibGDX"],
+        "highlights": ["LibECS"],
+        "challenges": ["Refactoring core game engine to optimize memory usage"],
+        "sourceUrl": ""
+    },
+    {
+        "title": "Achiever",
+        "description": ["Todo list webapp, written in NodeJS and deployed to AWS Elastic Beanstalk"],
+        "languages": ["Javascript", "NodeJS", "jQuery", "MongoDB", "OAuth"],
+        "highlights": ["Agiles Sprints"],
+        "challenges": ["schedule page"],
+        "sourceUrl": ""
+    },
+    {
+        "title": "OceanGate DAQ",
+        "description": ["Modular networked data aquisition device based on Teensy 3.6, which collects data from multiple sensor types and transmits packages over UDP."],
+        "languages": ["C++", "Arduino"],
+        "highlights": ["Stakeholder requirements"],
+        "challenges": ["SD Storage compatibility"],
+        "sourceUrl": ""
+    },
+    {
+        "title": "THEIA",
+        "description": ["Indoor navigation app for vision impaired users, focused on the determining and documenting requirements, then building the app based on requirements."],
+        "languages": ["Dart", "Flutter"],
+        "highlights": ["WRS Document", "Project Management Plan"],
+        "challenges": ["Pathfinding"],
+        "sourceUrl": ""
+    },
+    {
+        "title": "Questie",
+        "description": ["Contributed bug fixes and feature addtion to open source project Questie, which is a plugin for the MMO World of Warcraft"],
+        "languages": ["Lua"],
+        "highlights": ["Feature Pull request accepted"],
+        "challenges": ["Comprehending the large codebase"],
+        "sourceUrl": ""
+    },
+    {
+        "title": "Checkstyle Halstead Metrics",
+        "description": ["Extended the Checkstyle Eclipse plugin to add checks for various halstead metrics."],
+        "languages": ["Java"],
+        "highlights": ["Black and White box testing", "Cyclomatic complexity"],
+        "challenges": ["Whitebox testing"],
+        "sourceUrl": ""
+    },
+    {
+        "title": "IFMXSheets",
+        "description": ["Under construction..."],
+        "languages": ["C#"],
+        "highlights": [],
+        "challenges": [],
+        "sourceUrl": ""
+    },
+    {
+        "title": "Yelp App",
+        "description": ["Under construction..."],
+        "languages": ["C#", "PostgreSQL"],
+        "highlights": [],
+        "challenges": [],
+        "sourceUrl": ""
+    },
+    {
+        "title": "iKaizen",
+        "description": ["Under construction..."],
+        "languages": ["Java"],
+        "highlights": [],
+        "challenges": [],
+        "sourceUrl": ""
+    },
+    {
+        "title": "MTX-OS",
+        "description": ["Under construction..."],
+        "languages": ["C", "MIPS"],
+        "highlights": [],
+        "challenges": [],
+        "sourceUrl": ""
+    }
+]
