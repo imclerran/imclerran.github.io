@@ -6,7 +6,7 @@
         "languages": ["Java", "LibGDX"],
         "highlights": ["LibECS"],
         "challenges": ["Refactoring core game engine to optimize memory usage"],
-        "sourceUrl": ""
+        "sourceUrl": "https://gitlab.eecs.wsu.edu/cs-487/487sp19_projectile-inferno"
     },
     {
         "title": "Achiever",
@@ -14,7 +14,7 @@
         "languages": ["Javascript", "NodeJS", "jQuery", "MongoDB", "OAuth"],
         "highlights": ["Agiles Sprints"],
         "challenges": ["schedule page"],
-        "sourceUrl": ""
+        "sourceUrl": "#"
     },
     {
         "title": "OceanGate DAQ",
@@ -22,15 +22,15 @@
         "languages": ["C++", "Arduino"],
         "highlights": ["Stakeholder requirements"],
         "challenges": ["SD Storage compatibility"],
-        "sourceUrl": ""
+        "sourceUrl": "https://gitlab.eecs.wsu.edu/imclerran/DAQ"
     },
     {
         "title": "THEIA",
         "description": ["Indoor navigation app for vision impaired users, focused on the determining and documenting requirements, then building the app based on requirements."],
         "languages": ["Dart", "Flutter"],
         "highlights": ["WRS Document", "Project Management Plan"],
-        "challenges": ["Pathfinding"],
-        "sourceUrl": ""
+        "challenges": ["Pathfinding", "Prototyped in Adobe XD"],
+        "sourceUrl": "https://gitlab.eecs.wsu.edu/imclerran/theia"
     },
     {
         "title": "Questie",
@@ -38,7 +38,7 @@
         "languages": ["Lua"],
         "highlights": ["Feature Pull request accepted"],
         "challenges": ["Comprehending the large codebase"],
-        "sourceUrl": ""
+        "sourceUrl": "https://github.com/AeroScripts/QuestieDev/pull/1442"
     },
     {
         "title": "Checkstyle Halstead Metrics",
@@ -46,7 +46,7 @@
         "languages": ["Java"],
         "highlights": ["Black and White box testing", "Cyclomatic complexity"],
         "challenges": ["Whitebox testing"],
-        "sourceUrl": ""
+        "sourceUrl": "https://gitlab.eecs.wsu.edu/imclerran/cs422-project"
     },
     {
         "title": "IFMXSheets",
@@ -54,7 +54,7 @@
         "languages": ["C#"],
         "highlights": [],
         "challenges": [],
-        "sourceUrl": ""
+        "sourceUrl": "https://github.com/imclerran/IFMXSheets"
     },
     {
         "title": "Yelp App",
@@ -62,7 +62,7 @@
         "languages": ["C#", "PostgreSQL"],
         "highlights": [],
         "challenges": [],
-        "sourceUrl": ""
+        "sourceUrl": "#"
     },
     {
         "title": "iKaizen",
@@ -70,7 +70,7 @@
         "languages": ["Java"],
         "highlights": [],
         "challenges": [],
-        "sourceUrl": ""
+        "sourceUrl": "https://github.com/imclerran/iKaizen"
     },
     {
         "title": "MTX-OS",
@@ -78,6 +78,6 @@
         "languages": ["C", "MIPS"],
         "highlights": [],
         "challenges": [],
-        "sourceUrl": ""
+        "sourceUrl": "https://github.com/imclerran/MTX-OS"
     }
 ]
