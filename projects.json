@@ -4,7 +4,7 @@
         "title": "Projectile Inferno",
         "description": ["Bullet hell game focused on design patterns, which used the Entity-Component-System architecture to satisfy SOLID, and promote code reuse."],
         "languages": ["Java", "LibGDX"],
-        "highlights": ["LibECS"],
+        "highlights": ["Entity-Component-System architecture"],
         "challenges": ["Refactoring core game engine to optimize memory usage"],
         "sourceUrl": "https://gitlab.eecs.wsu.edu/cs-487/487sp19_projectile-inferno"
     },
@@ -12,7 +12,7 @@
         "title": "Achiever",
         "description": ["Todo list webapp, written in NodeJS and deployed to AWS Elastic Beanstalk"],
         "languages": ["Javascript", "NodeJS", "jQuery", "MongoDB", "OAuth"],
-        "highlights": ["Agile Sprints"],
+        "highlights": ["Planned and executed 4 1-week Agile style sprints"],
         "challenges": ["schedule page"],
         "sourceUrl": "#"
     },
@@ -29,31 +29,31 @@
         "description": ["Indoor navigation app for vision impaired users, focused on the determining and documenting requirements, then building the app based on requirements."],
         "languages": ["Dart", "Flutter"],
         "highlights": ["WRS Document", "Project Management Plan"],
-        "challenges": ["Pathfinding", "Prototyped in Adobe XD"],
+        "challenges": ["Pathfinding algorithm"],
         "sourceUrl": "https://gitlab.eecs.wsu.edu/imclerran/theia"
     },
     {
         "title": "Questie",
         "description": ["Contributed bug fixes and feature addtion to open source project Questie, which is a plugin for the MMO World of Warcraft"],
         "languages": ["Lua"],
-        "highlights": ["Feature Pull request accepted"],
+        "highlights": ["Feature pull request accepted and merged"],
         "challenges": ["Comprehending the large codebase"],
         "sourceUrl": "https://github.com/AeroScripts/QuestieDev/pull/1442"
     },
     {
         "title": "Checkstyle Halstead Metrics",
-        "description": ["Extended the Checkstyle Eclipse plugin to add checks for various halstead metrics."],
+        "description": ["Extended the Checkstyle Eclipse plugin to add checks for various halstead metrics, including cyclomatic complexity and maintainability index."],
         "languages": ["Java"],
-        "highlights": ["Black and White box testing", "Cyclomatic complexity"],
+        "highlights": ["Black and White box testing"],
         "challenges": ["Whitebox testing"],
         "sourceUrl": "https://gitlab.eecs.wsu.edu/imclerran/cs422-project"
     },
     {
         "title": "IFMXSheets",
-        "description": ["Under construction..."],
+        "description": ["Spreadsheet app written in C# with focus on basic design patterns. Implements an elegant polymorphic solution to Infix-to-postfix conversion, expression tree generation, and tree evaluation. Although the 'strategy' design pattern was not covered in the course, this solution is very similar to a strategy pattern."],
         "languages": ["C#"],
-        "highlights": [],
-        "challenges": [],
+        "highlights": ["Strategy design pattern for handling tokens"],
+        "challenges": ["Avoiding infinite circular propagation of cell change events"],
         "sourceUrl": "https://github.com/imclerran/IFMXSheets"
     },
     {
