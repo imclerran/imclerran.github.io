@@ -12,7 +12,7 @@
         "title": "Achiever",
         "description": ["Todo list webapp, written in NodeJS and deployed to AWS Elastic Beanstalk"],
         "languages": ["Javascript", "NodeJS", "jQuery", "MongoDB", "OAuth"],
-        "highlights": ["Agiles Sprints"],
+        "highlights": ["Agile Sprints"],
         "challenges": ["schedule page"],
         "sourceUrl": "#"
     },

@@ -33,49 +33,53 @@
         fetchJSONFile('projects.json', function (data) {
             projects = data;
 
-            var projectHtml = ""
+            var projectsHtml = ""
 
             projects.forEach(project => {
 
-                projectHtml += "<div class='w3-col m6 l4 grid-item'>"
-                projectHtml += "  <div class='w3-card-4 w3-white w3-round w3-text-grey card' style='min-height:100%'>";
-                projectHtml += "    <header class='w3-container'>"
-                projectHtml += "      <h4 style='font-weight:bold'>" + project.title + "</h4>";
-                projectHtml += "      <h6>"
-                projectHtml += "        <i class='fa fa-code fa-fw w3-margin-right w3-text-teal w3-left'"
-                projectHtml += "          style='display:inline-block!important; margin-top:4px'></i>"
+                projectsHtml += "<div class='w3-col m6 l4 grid-item'>"
+                projectsHtml += "  <div class='w3-card-4 w3-white w3-round w3-text-grey card' style='min-height:100%'>";
+                projectsHtml += "    <header class='w3-container'>"
+                projectsHtml += "      <h4 style='font-weight:bold'>" + project.title + "</h4>";
+                projectsHtml += "      <h6>"
+                projectsHtml += "        <i class='fa fa-code fa-fw w3-margin-right w3-text-teal w3-left'"
+                projectsHtml += "          style='display:inline-block!important; margin-top:4px'></i>"
                 project.languages.forEach(lang => {
-                    projectHtml += "<div class='w3-container w3-round-xlarge w3-center w3-teal chip w3-left'>" + lang + "</div>"
+                    projectsHtml += "<div class='w3-container w3-round-xlarge w3-center w3-teal chip w3-left'>" + lang + "</div>"
                 })
-                projectHtml += "      </h6>"
-                projectHtml += "    </header>"
-                projectHtml += "    <hr style='margin-bottom:0px; margin-top:8px'>"
-                projectHtml += "    <div class='w3-container'>"
+                projectsHtml += "      </h6>"
+                projectsHtml += "    </header>"
+                projectsHtml += "    <hr style='margin-bottom:0px; margin-top:8px'>"
+                projectsHtml += "    <div class='w3-container'>"
                 project.description.forEach(paragraph => {
-                    projectHtml += "<p>" + paragraph + "</p>"
+                    projectsHtml += "<p>" + paragraph + "</p>"
                 })
-                projectHtml += "      <h6><i class='fa fa-highlighter fa-fw w3-margin-right w3-text-teal'></i><span class='w3-text-teal'>Highlights:</span>&nbsp;"
+                projectsHtml += "      <h6><i class='fa fa-highlighter fa-fw w3-margin-right w3-text-teal'></i><span class='w3-text-teal'>Highlights:</span>&nbsp;"
                 project.highlights.forEach(function (highlight, index) {
-                    projectHtml += highlight
-                    if (index < project.highlights.length - 1) projectHtml += ",&nbsp;"
-                    else projectHtml += "&nbsp;"
+                    projectsHtml += highlight
+                    if (index < project.highlights.length - 1) projectsHtml += ",&nbsp;"
+                    else projectsHtml += "&nbsp;"
                 })
-                projectHtml += "      <h6><i class='fa fa-asterisk fa-fw w3-margin-right w3-text-teal'></i><span class='w3-text-teal'>Challenges:</span>&nbsp;"
+                projectsHtml += "      <h6><i class='fa fa-asterisk fa-fw w3-margin-right w3-text-teal'></i><span class='w3-text-teal'>Challenges:</span>&nbsp;"
                 project.challenges.forEach(function (challenge, index) {
-                    projectHtml += challenge
-                    if (index < project.challenges.length - 1) projectHtml += ",&nbsp;"
-                    else projectHtml += "&nbsp;"
+                    projectsHtml += challenge
+                    if (index < project.challenges.length - 1) projectsHtml += ",&nbsp;"
+                    else projectsHtml += "&nbsp;"
                 })
-                projectHtml += "    </div>"
-                projectHtml += "    <hr style='margin:0px'>"
-                projectHtml += "    <footer class='w3-container w3-large w3-center' style='margin-top:0px;'>"
-                projectHtml += "      <a href='" + project.sourceUrl + "' target='_blank'>Source Code</a>"
-                projectHtml += "    </footer>"
-                projectHtml += "  </div>"
-                projectHtml += "</div>"
-                //projectsHtml.push(projectHtml);
+                projectsHtml += "    </div>"
+                projectsHtml += "    <hr style='margin:0px'>"
+                projectsHtml += "    <footer class='w3-container w3-large w3-center' style='margin-top:0px;'>"
+                if (project.sourceUrl != "#") {
+                    projectsHtml += "<a href='" + project.sourceUrl + "' target='_blank'>Source Code</a>"
+                }
+                else {
+                    projectsHtml += "<a href='#' class='w3-text-red'>Link Unavailable</a>"
+                }
+                projectsHtml += "    </footer>"
+                projectsHtml += "  </div>"
+                projectsHtml += "</div>"
             });
-            document.getElementById("projects-container").innerHTML = projectHtml;
+            document.getElementById("projects-container").innerHTML = projectsHtml;
             var elem = document.querySelector('.grid');
             var msnry = new Masonry(elem, {
                 // options
