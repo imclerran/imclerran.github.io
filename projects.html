@@ -7,96 +7,25 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.min.js"></script>
+
+<script src="scripts/app.js"></script>
 
 <body style="height:100%">
 
     <script type="text/javascript">
-        var projects = [];
-        var projectsHtml = [];
 
-        function fetchJSONFile(path, callback) {
-            var httpRequest = new XMLHttpRequest();
-            httpRequest.onreadystatechange = function () {
-                if (httpRequest.readyState === 4) {
-                    if (httpRequest.status === 200) {
-                        var data = JSON.parse(httpRequest.responseText);
-                        if (callback) callback(data);
-                    }
-                }
-            };
-            httpRequest.open('GET', path);
-            httpRequest.send();
-        }
-
-        // this requests the file and executes a callback with the parsed result once
-        //   it is available
-        fetchJSONFile('projects.json', function (data) {
-            projects = data;
-
-            var projectsHtml = ""
-
-            projects.forEach(project => {
-
-                projectsHtml += "<div class='w3-col m6 l4 grid-item'>"
-                projectsHtml += "  <div class='w3-card-4 w3-white w3-round w3-text-grey card' style='min-height:100%'>";
-                projectsHtml += "    <header class='w3-container'>"
-                projectsHtml += "      <h4 style='font-weight:bold'>" + project.title + "</h4>";
-                projectsHtml += "      <h6>"
-                projectsHtml += "        <i class='fa fa-code fa-fw w3-margin-right w3-text-teal w3-left'"
-                projectsHtml += "          style='display:inline-block!important; margin-top:4px'></i>"
-                project.languages.forEach(lang => {
-                    projectsHtml += "<div class='w3-container w3-round-xlarge w3-center w3-teal chip w3-left'>" + lang + "</div>"
-                })
-                projectsHtml += "      </h6>"
-                projectsHtml += "    </header>"
-                projectsHtml += "    <hr style='margin-bottom:0px; margin-top:8px'>"
-                projectsHtml += "    <div class='w3-container'>"
-                project.description.forEach(paragraph => {
-                    projectsHtml += "<p>" + paragraph + "</p>"
-                })
-                projectsHtml += "      <h6><i class='fa fa-highlighter fa-fw w3-margin-right w3-text-teal'></i><span class='w3-text-teal'>Highlights:</span>&nbsp;"
-                project.highlights.forEach(function (highlight, index) {
-                    projectsHtml += highlight
-                    if (index < project.highlights.length - 1) projectsHtml += ",&nbsp;"
-                    else projectsHtml += "&nbsp;"
-                })
-                projectsHtml += "      <h6><i class='fa fa-asterisk fa-fw w3-margin-right w3-text-teal'></i><span class='w3-text-teal'>Challenges:</span>&nbsp;"
-                project.challenges.forEach(function (challenge, index) {
-                    projectsHtml += challenge
-                    if (index < project.challenges.length - 1) projectsHtml += ",&nbsp;"
-                    else projectsHtml += "&nbsp;"
-                })
-                projectsHtml += "    </div>"
-                projectsHtml += "    <hr style='margin:0px'>"
-                projectsHtml += "    <footer class='w3-container w3-large w3-center' style='margin-top:0px;'>"
-                if (project.sourceUrl != "#") {
-                    projectsHtml += "<a href='" + project.sourceUrl + "' target='_blank'>Source Code</a>"
-                }
-                else {
-                    projectsHtml += "<a href='#' class='w3-text-red'>Link Unavailable</a>"
-                }
-                projectsHtml += "    </footer>"
-                projectsHtml += "  </div>"
-                projectsHtml += "</div>"
-            });
-            document.getElementById("projects-container").innerHTML = projectsHtml;
-            var elem = document.querySelector('.grid');
-            var msnry = new Masonry(elem, {
-                // options
-                columnWidth: '.grid-item',
-                itemSelector: '.grid-item',
-                //gutter: 16,
-            });
-        });
+        fetchJSONFile('projects.json', populateProjectCards)
     </script>
 
-    <div id="navbar" class="w3-top w3-container w3-white w3-card-4 w3-xlarge w3-text-dark-grey">
+    <div id="navbar" class="w3-top w3-container w3-white w3-card-4 w3-xlarge w3-text-dark-grey nav-light">
         <div class="w3-bar w3-center">
             <a href="index.html" class="w3-bar-item w3-button w3-hover-teal">
-                <i class="fas fa-home"></i>&nbsp;&nbsp;CV
+                <i class="fas fa-home"></i>
             </a>
             <a href="projects.html" class="w3-bar-item w3-button w3-hover-teal">Projects</a>
             <a href="contact.html" class="w3-bar-item w3-button w3-hover-teal">Contact</a>
+            <!-- <a class="w3-bar-item w3-button w3-hover-teal w3-right" onclick="darkToggle()"><i class="fas fa-adjust"></i></a> -->
         </div>
     </div>
 
@@ -155,7 +84,7 @@
     </div>
 
     <footer class="w3-container  w3-bottom w3-center">
-        <div class="w3-bar w3-white w3-card-4 pill-left-end pill-right-end w3-text-dark-grey">
+        <div class="w3-bar w3-white w3-card-4 pill-left-end pill-right-end w3-text-dark-grey nav-light">
             <a href="https://github.com/imclerran" target="_blank" class="w3-button w3-hover-teal pill-left-end"
                 style="text-decoration:none">
                 <i class="fab fa-github w3-xlarge"></i>
